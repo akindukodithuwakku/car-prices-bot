@@ -21,8 +21,8 @@ Welcome to the Car Prices Scraper project! This project is designed to scrape ca
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/car-prices-scraper.git
-    cd car-prices-scraper
+    git clone https://github.com/akindukodithuwakku/car-prices-bot.git
+    cd car-prices-bot
     ```
 
 2. **Create a virtual environment and activate it:**
@@ -65,3 +65,16 @@ To scrape new data, update the `scraper.py` script and run it:
 
 ```bash
 python scraper.py
+
+
+The new data will be saved and can be accessed via the web interface.
+
+License
+This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. See the LICENSE file for details.
+
+Disclaimer
+This project is for educational purposes only. The content displayed is sourced from riyasewana.com, and the original content is owned by them. This project aims to demonstrate web scraping, Flask, and web development techniques.
+
+Thank you for checking out the Car Prices Scraper project! If you have any questions or suggestions, feel free to open an issue or contact the project maintainer.
+
+
