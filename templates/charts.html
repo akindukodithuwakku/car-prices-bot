@@ -1,10 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Charts - Prize{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chart.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="chartform">
+        <form method="POST">
+            <h2>See Analytics</h2>
+
+            <div class="mb-3">
+                <h2> Search Vehicle</h2>
+                <label for="brand" class="form-label">Select Brand:</label>
+                <select class="form-control" id="brand" name="brand">
+                    <option value="" disabled selected></option>
+                    <option value="toyota">Toyota</option>
+                    <option value="suzuki">Suzuki</option>
+                    <option value="bmw">BMW</option>
+                    <option value="honda">Honda</option>
+                    <option value="ford">Ford</option>
+                    <option value="mercedes-benz">Mercedes-Benz</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="vehicleName" class="form-label">Vehicle Name</label>
+                <input type="text" class="form-control" id="vehicleName" name="vehicleName">
+            </div>
+
+            <div class="mb-2">
+                <label for="graphType" class="form-label">Select Chart Type:</label>
+                <select class="form-control" id="graphType" name="graphType">
+                    <option value="priceVsmileage">Price Vs Mileage</option>
+                    <option value="carVslocation">Cars Vs Location</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Search</button>
+        </form>
+    </div>
+</div>
+
+<hr>
+
+<div class="container mt-3">
+    <h1 style="text-align:center">Charts</h1>
+    <img src="{{ url_for('static', filename='images/graph.png') }}" alt="Chart">
+</div>
+
+{% endblock %}
