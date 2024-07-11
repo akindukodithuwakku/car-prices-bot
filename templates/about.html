@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us - Prize{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="about-container">
+        <h1 >About This Product</h1>
+        <p>Welcome to Prize, your go-to platform for finding the best car deals in the market. My mission is to provide you with the most accurate and up-to-date information on car prices, helping you make informed decisions when purchasing your next vehicle.</p>
+        <h2>My Mission</h2>
+        <p>At Prize, I strive to be the most reliable source of car pricing information. I understand that buying a car is a significant investment, and my goal is to make this process as smooth and transparent as possible for my users.</p>
+        <h2>What I Do</h2>
+        <p>I aggregate data from various trusted sources to provide you with a comprehensive list of car prices, models, and specifications. Whether you are looking for a new or used car, my platform offers detailed information to help you find the perfect match for your needs and budget.</p>
+        <h2>Why I Build This</h2>
+        <ul>
+            <li>Easy to sort out price ranges.</li>
+            <li>Easy to go through selection process.</li>
+            <li>Up-to-date and accurate car pricing information.</li>
+            <li>Wide range of car brands and models to choose from.</li>
+        </ul>
+        <h2>Disclaimer</h2>
+        <p>This product is for educational purposes only. I built this site with the intention of learning Python web scraping, Flask, and web development.</p>
+        <p>The content shown here is owned by <a href="https://riyasewana.com">riyasewana.com</a> as the original author.</p>
+    </div>
+</div>
+{% endblock %}

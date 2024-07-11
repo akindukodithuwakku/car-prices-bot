@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Car Prices{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="custom-form-container">
+        <form method="POST">
+            <div class="mb-3">
+                <h2> Search Vehicle</h2>
+                <label for="brand" class="form-label">Select Brand:</label>
+                <select class="form-control" id="brand" name="brand">
+                    <option value="" disabled selected></option>
+                    <option value="toyota">Toyota</option>
+                    <option value="suzuki">Suzuki</option>
+                    <option value="bmw">BMW</option>
+                    <option value="honda">Honda</option>
+                    <option value="ford">Ford</option>
+                    <option value="mercedes-benz">Mercedes-Benz</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="vehicleName" class="form-label">Vehicle Name</label>
+                <input type="text" class="form-control" id="vehicleName" name="vehicleName">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Search</button>
+        </form>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Car Name</th>
+            <th scope="col">Location</th>
+            <th scope="col">Price</th>
+            <th scope="col">Mileage</th>
+            <th scope="col">Link</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in table_data %}
+        <tr>
+            <th scope="row">{{ item.index }}</th>
+            <td>{{ item.name }}</td>
+            <td>{{ item.location }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.mileage }}</td>
+            <td><a href="{{ item.link }}" target="_blank">View</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
