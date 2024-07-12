@@ -1,4 +1,4 @@
-# Car Prices Scraper
+# Car Prices Scraper Bot
 
 Welcome to the Car Prices Scraper project! This project is designed to scrape car prices and related information from a commercial site for educational purposes. The data is then presented through a web interface built using Flask, enabling users to visualize and analyze the scraped data.
 
@@ -65,7 +65,9 @@ To scrape new data, update the `scraper.py` script and run it:
 
 ```bash
 python scraper.py
-
+```
+**see the live web on
+https://car-prices-bot.onrender.com/
 
 The new data will be saved and can be accessed via the web interface.
 
